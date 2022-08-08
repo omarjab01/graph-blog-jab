@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, ProjectDetail } from '../../components'
+import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, ProjectDetail, Loader } from '../../components'
 import { GraphQLClient, gql } from 'graphql-request';
 
 
