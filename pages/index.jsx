@@ -36,7 +36,7 @@ export async function getStaticProps(){
   return {
     props: {
       posts
-    }
+    }, fallback: true,
   }
 }
 
