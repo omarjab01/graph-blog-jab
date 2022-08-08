@@ -3,7 +3,48 @@ import Head from 'next/head'
 import { PostCard, PostWidget, Categories } from '../components'
 import { getPosts } from '../services' 
 
+import {GraphQLClient, gql} from 'graphql-request'
 
+const graphcms = new GraphQLClient(
+  "https://api-eu-central-1.hygraph.com/v2/cl6khztyd600801uqbmuqbn3c/master"
+);
+
+const QUERY = gql`
+  {
+      posts{
+        author {
+            name
+            bio
+            photo {
+                url
+            }
+            id
+        }
+        createdAt
+        excerpt
+        slug
+        title
+        featuredimage {
+            url
+        }
+        categories {
+            name
+            slug
+        }
+                    }
+  }
+`;
+
+
+export async function getStaticProps() {
+  const { posts } = await graphcms.request(QUERY);
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 30,
+  };
+}
 
 export default function Home({posts}){
   return(
@@ -15,7 +56,7 @@ export default function Home({posts}){
         <div className='lg:col-span-8 col-span-1' >
           {
             posts.map((post, index) => (
-              <PostCard post={post.node} key={post.node.title} />
+              <PostCard post={post} key={post.title} />
             ))
           }
         </div>
@@ -30,13 +71,13 @@ export default function Home({posts}){
   )
 }
 
-export async function getStaticProps(){
-  const posts = (await getPosts()) || [];
+// export async function getStaticProps(){
+//   const posts = (await getPosts()) || [];
 
-  return {
-    props: {
-      posts
-    }, fallback: true,
-  }
-}
+//   return {
+//     props: {
+//       posts
+//     },
+//   }
+// }
 
