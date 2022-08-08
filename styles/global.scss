@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: rgb(253, 253, 253);
+}
+
+.body-post{
+    h1{
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+    h2{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+    h3{
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    h4{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    h5{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    h6{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 2;
+        color: rgb(66, 66, 66);
+        margin-bottom: 2rem;
+    }
+    pre{
+        white-space: pre-wrap;
+        code{
+            background-color: rgb(250, 250, 250);
+            border-radius: 15px;
+            border: 1px solid rgb(212, 212, 212);
+            display: block;
+            padding: 20px;
+            max-width: 100%;
+        }
+    }
+    img{
+        border-radius: 15px;
+    }
+    ul{
+        list-style:square;
+        padding-left: 2rem;
+    }
+    a{
+        color: rgb(0, 162, 255);
+    }
+}
+
+.flex-altezza{
+    height: 100%;
+}
