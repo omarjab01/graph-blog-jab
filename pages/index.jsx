@@ -52,10 +52,10 @@ export default function Home({posts}){
       <Head>
         <title>Omar Jabraoui</title>
       </Head>
-      <div className='grid grid-cols-1 xl:grid-cols-12 gap-12'>
+      <div className='grid grid-cols-1 xl:grid-cols-12 xl:gap-12 md:grid-cols-2'>
         <div className='lg:col-span-8 col-span-1' >
           {
-            posts.map((post, index) => (
+            posts.reverse().map((post, index) => (
               <PostCard post={post} key={post.title} />
             ))
           }

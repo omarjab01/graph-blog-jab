@@ -5,11 +5,11 @@ import Link from 'next/link'
 const PostCard = ({ post }) => {
   console.log(post)
   return (
-    <div className='rounded-lg mb-12 grid grid-cols-1 2xl:grid-cols-2'>
+    <div className='rounded-lg mb-12 grid grid-cols-1 xl:grid-cols-2'>
       <Link href={`/post/${post.slug}`}>
         <img src={post.featuredimage.url} alt={post.title} className="rounded-lg cursor-pointer" />
       </Link>
-      <div className='mt-4 lg:mt-0 2xl:ml-6 m-auto 2xl:flex 2xl:flex-col 2xl:justify-between h-100 2xl:py-2 flex-altezza'>
+      <div className='mt-4 lg:mt-0 xl:ml-6 m-auto h-100 xl:py-2 flex-altezza'>
         <div>
           <h1 className='h1 font-semibold text-xl md:text-2xl xl:text-3xl hover:text-blue-700 transition duration-100'>
             <Link href={`/post/${post.slug}`}>

@@ -29,7 +29,8 @@ const PostWidget = ({categories, slug}) => {
       </h1>
       {
         relatedPosts.map((post) => (
-          <div key={post.title} className="flex flex-row flex-grow items-center justify-between my-4">
+          <Link key={post.slug} href={`/post/${post.slug}`}>
+          <div key={post.title} className="flex flex-row flex-grow items-center justify-between my-4 cursor-pointer hover:text-blue-500 transition duration-300">
               <div className='text-base max-w-10 font-medium'>
                 {post.title}
               </div>
@@ -37,6 +38,7 @@ const PostWidget = ({categories, slug}) => {
                 {moment(post.createdAt).format("MMM DD, YYYY")}
               </div>
           </div>
+          </Link>
         ))
       }
 
