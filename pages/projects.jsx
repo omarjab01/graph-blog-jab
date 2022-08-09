@@ -42,6 +42,8 @@ export async function getStaticProps() {
 
 export default function Projects({ projects }){
   console.log(projects);
+
+  
   return(
     <div className='container max-w-7xl mx-auto px-4 mb-8'>
       <Head>

@@ -52,8 +52,9 @@ export default function Home({posts}){
       <Head>
         <title>Omar Jabraoui</title>
       </Head>
-      <div className='grid grid-cols-1 xl:grid-cols-12 xl:gap-12 md:grid-cols-2'>
-        <div className='lg:col-span-8 col-span-1' >
+      <div className='grid grid-cols-1 xl:grid-cols-12 xl:gap-12 lg:grid-cols-2 md:grid-cols-1'>
+        
+        <div className='lg:col-span-8 col-span-1 grid grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-2 xl:grid-cols-1'>
           {
             posts.reverse().map((post, index) => (
               <PostCard post={post} key={post.title} />
@@ -62,8 +63,8 @@ export default function Home({posts}){
         </div>
         <div className='lg:col-span-4 col-span-1'>
           <div className='lg:sticky relative top-8'>
-            <PostWidget />
             <Categories />
+            <PostWidget />
           </div>
         </div>
       </div>

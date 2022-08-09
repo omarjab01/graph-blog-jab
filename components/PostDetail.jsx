@@ -54,9 +54,9 @@ const PostDetail = ({ post }) => {
                 <h1 className='font-semibold text-3xl'>{post.title}</h1>
                 <span class="block text-xs inline-block w-fit my-2 py-2 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-blue-600 text-white rounded-full">{post.categories[0].name}</span>
                 
-                <p className='my-2'>
+                {/* <p className='my-2'>
                     {post.excerpt}
-                </p>
+                </p> */}
             </div>
             
             <div className='flex flex-row justify-between items-center mt-2 mb-8'>
