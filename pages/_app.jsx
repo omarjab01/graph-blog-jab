@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import * as gtag from '../lib/gtag'
 
 
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   useEffect(() => {
@@ -22,11 +23,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
-      <Script
+      <script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
-      <Script
+      <script
         id="gtag-init"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
