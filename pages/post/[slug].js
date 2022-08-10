@@ -13,9 +13,9 @@ const PostDetails = ({post}) => {
         )
     }
   return (
-    <div className='container max-w-7xl mx-auto px-4 mb-8'>
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-            <div className='col-span-1 lg:col-span-8'>
+    <div className='container max-w-2xl mx-auto px-4 md:p-0 mb-8'>
+        <div className='grid grid-cols-1'>
+            <div className='col-span-1'>
                 <PostDetail 
                     post={post}
                 />
@@ -29,12 +29,12 @@ const PostDetails = ({post}) => {
                     slug={post.slug}
                 /> */}
             </div>
-            <div className='col-span-1 lg:col-span-4'>
+            {/* <div className='col-span-1 lg:col-span-4'>
                 <PostWidget 
                     slug={post.slug} categories={post.categories.map((category) => category.slug)}
                 /> 
                 <Categories />
-            </div>
+            </div> */}
 
         </div>
     </div>

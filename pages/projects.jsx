@@ -11,7 +11,7 @@ const graphcms = new GraphQLClient(
 
 const QUERY = gql`
   {
-    projects {
+    projects(orderBy: createdAt_DESC) {
         createdAt
         excerpt
         slug
@@ -45,14 +45,14 @@ export default function Projects({ projects }){
 
   
   return(
-    <div className='container max-w-7xl mx-auto px-4 mb-8'>
+    <div className='container max-w-2xl mx-auto px-4 md:px-0 mb-8'>
       <Head>
         <title>Omar Jabraoui</title>
       </Head>
-      <h1>
-        💼 Projects
+      <h1 className='mt-8 mb-16 text-3xl font-bold text-center '>
+        Projects
       </h1>
-        <div className='grid md:col-span-3 grid-cols-1 xl:grid-cols-2 md:grid-cols-2 gap-16' >
+        <div className='grid grid-cols-1 gap-4'>
           {
             projects.map((project, index) => (
               <ProjectCard project={project} key={project.title} />

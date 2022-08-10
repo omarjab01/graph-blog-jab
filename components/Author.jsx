@@ -12,7 +12,7 @@ const Author = ({author}) => {
 
       />
       <div className='text-white ml-8'>
-        <h1 className='text-base md:text-2xl font-medium'>{author.name}</h1>
+        <h1 className='text-base md:text-xl font-medium'>{author.name}</h1>
         <h6 className='text-gray-400'>{author.bio}</h6>
           <p className='text-gray-400'>
             If you want to contact me, feel free to use my email -> 

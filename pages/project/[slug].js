@@ -64,21 +64,13 @@ const ProjectDetails = ({ project }) => {
         )
     }
     return (
-        <div className='container max-w-7xl mx-auto px-4 mb-8'>
+        <div className='container max-w-2xl mx-auto p-4 md:p-0 mb-8'>
             <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
                 <div className='col-span-1 lg:col-span-8'>
                     <ProjectDetail
                         project={project}
                     />
-                    {/* <Author 
-                    author={project.author}
-                /> */}
-                    {/* <CommentsForm 
-                    slug={project.slug}
-                />
-                <Comments 
-                    slug={project.slug}
-                /> */}
+
                 </div>
             </div>
         </div>

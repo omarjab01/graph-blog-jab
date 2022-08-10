@@ -11,25 +11,49 @@ const Categories = () => {
   }, [])
 
   return (
-    <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
+    // <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
 
-      <h1 className='text-xl mb-8 font-semibold border-b pb-4'>
-        Categories
-      </h1>
-      <div className="flex flex-col gap-2" >
-      {
-        categories.map((category) => (
-          <Link key={category.slug} href={`/category/${category.slug}`}>
-            <span className='font-base text-base max-w-10 cursor-pointer hover:font-semibold'>
-              {category.name}
-            </span>
-          </Link>
-        ))
-      }
-      </div>
+    //   <h1 className='text-xl mb-8 font-semibold border-b pb-4'>
+    //     Categories
+    //   </h1>
+    //   <div className="flex flex-col gap-2" >
+    //   {
+    //     categories.map((category) => (
+    //       <Link key={category.slug} href={`/category/${category.slug}`}>
+    //         <span className='font-base text-base max-w-10 cursor-pointer hover:font-semibold'>
+    //           {category.name}
+    //         </span>
+    //       </Link>
+    //     ))
+    //   }
+    //   </div>
       
 
-    </div>
+    // </div>
+
+    <select name="categories" id="categories">
+      {
+         categories.map((category) => (
+           
+             <option value={category.slug}>
+              <Link key={category.slug} href={`/category/${category.slug}`}>
+                {category.name}
+              </Link>
+            </option>
+           
+         ))
+       }
+    </select>
+      // {
+      //    categories.map((category) => (
+      //      <Link key={category.slug} href={`/category/${category.slug}`}>
+      //        <span className='font-base text-base max-w-10 cursor-pointer hover:font-semibold'>
+      //          {category.name}
+      //        </span>
+      //      </Link>
+      //    ))
+      //  }
+  
   )
 }
 
