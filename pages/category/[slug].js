@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import { getCategories, getCategoryPost } from '../../services';
 import { PostCard, Categories, Loader } from '../../components';
@@ -7,23 +8,47 @@ import { PostCard, Categories, Loader } from '../../components';
 const CategoryPost = ({ posts }) => {
   const router = useRouter();
 
+  const [searchCategory, setSearchCategory] = useState("");
+
   if (router.isFallback) {
     return <Loader />;
   }
 
   return (
-    <div className="container max-w-7xl mx-auto px-4 mb-8">
-      <div className="grid grid-cols-1 xl:grid-cols-12 gap-12">
-        <div className="lg:col-span-8 col-span-1">
-          {posts.map((post, index) => (
-            <PostCard key={index} post={post.node} />
-          ))}
+    <div className="container max-w-2xl mx-auto px-4 md:px-0 mb-8">
+      <div className='search bg-gradient-to-br from-gray-700 to-gray-800 items-center flex flex-col justify-center my-8 rounded-xl p-8'>
+        
+        
+        <h1 className='h1 font-semibold text-2xl text-white' >Blog</h1>
+        <input
+          type="search"
+          placeholder="Search.."
+          onChange={event => { setSearchCategory(event.target.value) }}
+          className="py-4 px-8 rounded-full input-category mb-4"
+        />
+        
+
+      </div>
+
+      <div className='flex flex-row items-center my-4 text-black'>
+          <Link href="/blog">
+            <h1 className='h1 font-semibold text-lg cursor-pointer'>Blog ></h1>
+          </Link>
+          <h1 className='ml-2'>{posts[0].node.categories[0].name}</h1>
         </div>
-        <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
-            <Categories />
-          </div>
-        </div>
+
+
+      <div className="grid col-span-1 gap-12">
+        {posts.filter((val) => {
+          if (searchCategory == "") {
+            return val
+          }
+          else if (val.node.title.toLowerCase().includes(searchCategory.toLowerCase())) {
+            return val
+          }
+        }).map((post, index) => (
+          <PostCard key={index} post={post.node} />
+        ))}
       </div>
     </div>
   );

@@ -20,6 +20,11 @@ const Socials = () => {
                     </a>
                 </li>
                 <li>
+                    <a href="https://www.instagram.com/omarjab.design/" target="__blank" className='flex flex-row items-center'>
+                        <img src="/icons/instagram.svg" height="20px" width="20px" /><h6 className='ml-4'>Instagram</h6>
+                    </a>
+                </li>
+                <li>
                     <a href="https://github.com/omarjab01" target="__blank" className='flex flex-row items-center'>
                         <img src="/icons/github.svg" height="20px" width="20px" /><h6 className='ml-4'>OmarJab01</h6>
                     </a>

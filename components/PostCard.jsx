@@ -20,7 +20,7 @@ const PostCard = ({ post }) => {
 
           <div className='flex flex-row justify-between items-center'>
             <Link href={`/category/${post.categories[0].slug}`}>
-              <span class="block cursor-pointer text-xs inline-block w-fit my-2 py-2 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-blue-500 text-white rounded-full">{post.categories[0].name}</span>
+              <span className="block cursor-pointer text-xs inline-block w-fit my-2 py-2 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-blue-500 text-white rounded-full">{post.categories[0].name}</span>
             </Link>
             <div className='font-medium'>
               {moment(post.createdAt).format("MMM DD, YYYY")}

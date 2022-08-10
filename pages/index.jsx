@@ -67,7 +67,7 @@ export default function Home({posts}){
             </Link>
           </div>
           
-          <div className='grid grid-cols-1 sm:gap-4 gap-12'>
+          <div className='grid grid-cols-1 sm:gap-8 gap-12'>
             {
               posts.map((post, index) => (
                 <PostCard post={post} key={post.title} />

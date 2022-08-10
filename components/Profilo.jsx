@@ -40,7 +40,7 @@ const Profilo = ({author}) => {
 
         <div className='col-span-5'>
           <h1 className='md:text-xl h1 font-semibold text-md'>Hello 👋</h1><h1 className='md:text-xl h1 font-semibold text-md'>I'm Omar Jabraoui</h1>
-          <p className='text-gray-100 text-sm md:text-base'>I love designing and making awesome web apps, crafting beautiful websites and improving user experience.</p>
+          <p className='text-gray-400 text-sm md:text-base'>I love designing and making awesome web apps, crafting beautiful websites and improving user experience.</p>
         </div>
 
 
