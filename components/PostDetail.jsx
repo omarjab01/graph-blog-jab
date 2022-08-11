@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import Head from 'next/head'
 
 
 
@@ -48,6 +49,13 @@ const PostDetail = ({ post }) => {
 
     return (
         <>
+        <Head>
+            <title>{post.title}</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="description" content={post.excerpt} />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        </Head>
         <div className='rounded-lg mb-8 border-b pb-8'>
             
             <div className='my-4'>
@@ -61,7 +69,7 @@ const PostDetail = ({ post }) => {
             
             <div className='flex flex-row justify-between items-center mt-2 mb-8'>
                 <div className='flex flex-row items-center'>
-                    <img src={post.author.photo.url} height="30px" width="30px" />
+                    <img src={post.author.photo.url} height="30px" width="30px" alt={post.title}/>
                     <p className='font-semibold ml-2'>{post.author.name}</p>
                 </div>
                 <div className='font-medium'>

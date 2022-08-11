@@ -41,14 +41,17 @@ export async function getStaticProps() {
 
 
 export default function Projects({ projects }) {
-  console.log(projects);
-
 
   return (
-    <div className='container max-w-2xl mx-auto px-4 md:px-0 mb-8'>
+    <>
       <Head>
-        <title>Omar Jabraoui</title>
+        <title>Portfolio</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Portfolio | Progetti di Omar Jabraoui" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+    
+    <div className='container max-w-2xl mx-auto px-4 md:px-0 mb-8'>
       <div className='search bg-gradient-to-br from-gray-700 to-gray-800 items-center flex flex-col justify-center my-8 rounded-xl p-8'>
         <h1 className='h1 font-semibold text-2xl text-white mb-2' >Projects</h1>
       </div>
@@ -60,6 +63,7 @@ export default function Projects({ projects }) {
         }
       </div>
     </div>
+    </>
   )
 }
 

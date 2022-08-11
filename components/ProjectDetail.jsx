@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import Head from 'next/head'
 
 
 const ProjectDetail = ({ project }) => {
@@ -10,7 +11,7 @@ const ProjectDetail = ({ project }) => {
             
             <div className='my-4'>
                 <h1 className='font-semibold text-3xl'>{project.title}</h1>
-                <span class="block text-xs inline-block w-fit my-2 py-2 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-blue-600 text-white rounded-full">{project.categories[0].name}</span>
+                <span className="block text-xs inline-block w-fit my-2 py-2 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-medium bg-blue-600 text-white rounded-full">{project.categories[0].name}</span>
                 
                 <p className='my-2'>
                     {project.excerpt}

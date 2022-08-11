@@ -3,7 +3,6 @@ import moment from 'moment'
 import Link from 'next/link'
 
 const PostCard = ({ post }) => {
-  console.log(post)
   return (
     <div className='rounded-lg grid grid-cols-1 sm:grid-cols-3 sm:bg-transparent '>
 

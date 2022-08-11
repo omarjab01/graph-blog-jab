@@ -30,7 +30,6 @@ import Link from 'next/link';
 // }
 
 const Profilo = ({author}) => {
-  console.log("autore", author)
   return (
     <div className='grid grid-cols-6 bg-gradient-to-br from-gray-700 to-gray-800 p-8 rounded-lg gap-4 text-white justify-start my-2 md:my-6'>
         

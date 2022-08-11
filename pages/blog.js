@@ -3,6 +3,7 @@ import {GraphQLClient, gql} from 'graphql-request'
 import { PostCard } from '../components';
 import SearchBox from '../components/SearchBox';
 import PostCardBlog from '../components/PostCardBlog';
+import Head from 'next/head';
 
 
 const graphcms = new GraphQLClient(
@@ -51,6 +52,13 @@ const blog = ({posts}) => {
     const [searchTerm, setSearchTerm] = useState("");
 
     return (
+        <>
+        <Head>
+            <title>Blog</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="description" content="Articoli e guide gratuite su Web Design, Development, UI/UX Design e molto altro" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
         <div className='p-4 max-w-2xl mx-auto md:p-0'>
             <div className='search bg-gradient-to-br from-gray-700 to-gray-800 items-center flex flex-col justify-center my-8 rounded-xl p-8'>
                 <h1 className='h1 font-semibold text-2xl text-white mb-2' >Blog</h1>
@@ -78,6 +86,7 @@ const blog = ({posts}) => {
                 }
             </div>
         </div>
+    </>
     )
 }
 
