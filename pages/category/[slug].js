@@ -15,15 +15,16 @@ const CategoryPost = ({ posts }) => {
     return <Loader />;
   }
 
+  const titolo = posts[0].node.categories[0].name
+
   return (
     <>
       <Head>
-        <title>{posts[0].node.categories[0].name}</title>
+        <title>{titolo}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content={`Post relativi a ${posts[0].node.categories[0].name}`} />
+        <meta name="description" content={`Post relativi a ${titolo}`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-    
     
     <div className="container max-w-2xl mx-auto px-4 md:px-0 mb-8">
       <div className='search bg-gradient-to-br from-gray-700 to-gray-800 items-center flex flex-col justify-center my-8 rounded-xl p-8'>
