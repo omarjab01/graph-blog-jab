@@ -25,7 +25,7 @@ const ProjectDetail = ({ project }) => {
                 />
             </div>
         </div>
-        <div className='my-8 body-project' dangerouslySetInnerHTML={{__html: project.content.html}}>
+        <div className='my-8 body-post' dangerouslySetInnerHTML={{__html: project.content.html}}>
         </div>
         </>
     )
